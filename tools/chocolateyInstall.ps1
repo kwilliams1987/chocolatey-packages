@@ -1,0 +1,1 @@
+Install-ChocolateyPackage 'Nvidia GeForce NOW' 'exe' '' 'https://download.nvidia.com/gfnpc/GeForceNOW-release.exe' 'https://download.nvidia.com/gfnpc/GeForceNOW-release.exe' 'b90eb039ff3f54a1f624fc8acd0fed35922574b44119a64fae935263da703bb0' 'b90eb039ff3f54a1f624fc8acd0fed35922574b44119a64fae935263da703bb0' 'sha256'
