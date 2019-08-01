@@ -6,15 +6,12 @@
     <version>1.0.0</version>
     <authors>Nvidia Corporation</authors>
     <owners>Kristian Williams</owners>
-    <summary>The ultimate toolbox to configure PHP on Windows and IIS.</summary>
-    <description>
-      With over 400 supported top games, like PLAYERUNKNOWN'S BATTLEGROUNDS, Fortnite, and more from Steam, Uplay, and other popular digital stores, you can play your favorite PC games on nearly any device anywhere you go. Select games from your personal PC game library or purchase new ones, with new games being added all the time. Your favorite titles load faster and stay up-to-date with the latest patches when you stream from the GeForce NOW cloud service.
-      * This package always installs the latest version of GeForce NOW, regardless of the version specified in the package.
-    </description>
+    <summary>This package always installs the latest version of GeForce NOW, regardless of the version specified in the package.</summary>
+    <description>With over 400 supported top games, like PLAYERUNKNOWN'S BATTLEGROUNDS, Fortnite, and more from Steam, Uplay, and other popular digital stores, you can play your favorite PC games on nearly any device anywhere you go. Select games from your personal PC game library or purchase new ones, with new games being added all the time. Your favorite titles load faster and stay up-to-date with the latest patches when you stream from the GeForce NOW cloud service.</description>
     <projectUrl>https://www.nvidia.com/en-us/geforce/products/geforce-now/</projectUrl>
     <tags>games streaming geforce nvidia</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl></iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/kwilliams1987/nvidia-geforce-now/master/resources/icon.ico</iconUrl>
 	<dependencies />
   </metadata>
   <files>
