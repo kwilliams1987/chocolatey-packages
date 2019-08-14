@@ -3,18 +3,33 @@
   <metadata>
     <id>nvidia-geforce-now</id>
     <title>Nvidia GeForce NOW</title>
-    <version>1.0.0</version>
+    <version>1.0.8.0</version>
     <authors>Nvidia Corporation</authors>
     <owners>Kristian Williams</owners>
-    <summary>This package always installs the latest version of GeForce NOW, regardless of the version specified in the package.</summary>
-    <description>With over 400 supported top games, like PLAYERUNKNOWN'S BATTLEGROUNDS, Fortnite, and more from Steam, Uplay, and other popular digital stores, you can play your favorite PC games on nearly any device anywhere you go. Select games from your personal PC game library or purchase new ones, with new games being added all the time. Your favorite titles load faster and stay up-to-date with the latest patches when you stream from the GeForce NOW cloud service.</description>
+    <summary>Web based game streaming, powered by NVIDIA.</summary>
+    <description>### Introduction
+With over 400 supported top games, like PLAYERUNKNOWN'S BATTLEGROUNDS, Fortnite, and more from Steam, Uplay, and other popular digital stores, you can play your favorite PC games on nearly any device anywhere you go.
+
+Select games from your personal PC game library or purchase new ones, with new games being added all the time.
+
+Your favorite titles load faster and stay up-to-date with the latest patches when you stream from the GeForce NOW cloud service.
+
+### Notes
+* A stable internet connection is required for streaming.
+* GeForce NOW is currently free while in beta, this may change once the beta period ends.
+
+### Auto Updating Package
+This package always installs the latest version of GeForce NOW, regardless of the version specified in the package.
+    </description>
     <projectUrl>https://www.nvidia.com/en-us/geforce/products/geforce-now/</projectUrl>
+    <docsUrl>https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/geforce-now/mac/geforce-now-mac-qsg.pdf</docsUrl>
+    <bugTrackerUrl>https://www.nvidia.com/en-us/geforce/forums/gfn-for-pc/22/</bugTrackerUrl>
     <tags>games streaming geforce nvidia</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/kwilliams1987/nvidia-geforce-now/master/resources/icon.ico</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/kwilliams1987/nvidia-geforce-now/resources/icon.ico</iconUrl>
 	<dependencies />
   </metadata>
   <files>
-	<file src="tools\**" target="tools" />
+	  <file src="tools\**" target="tools" />
   </files>
 </package>
