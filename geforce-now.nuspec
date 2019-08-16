@@ -23,7 +23,7 @@ This package always installs the latest version of GeForce NOW, regardless of th
     </description>
     <projectUrl>https://www.nvidia.com/en-us/geforce/products/geforce-now/</projectUrl>
     <docsUrl>https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/geforce-now/mac/geforce-now-mac-qsg.pdf</docsUrl>
-    <bugTrackerUrl>https://www.nvidia.com/en-us/geforce/forums/gfn-for-pc/22/</bugTrackerUrl>
+    <mailingListUrl>https://www.nvidia.com/en-us/geforce/forums/gfn-for-pc/22/</mailingListUrl>
     <tags>games streaming geforce nvidia</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/kwilliams1987/nvidia-geforce-now/resources/icon.ico</iconUrl>
