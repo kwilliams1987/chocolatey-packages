@@ -34,4 +34,12 @@ if ($local -eq $online) {
 
     Write-Host "Repackaging...";
     .\pack.cmd
+
+    $apiKey = Read-Host "Enter a valid Chocolatey API Key to publish:";
+
+    if ($apiKey -ne "") 
+    {
+        Write-Host "Pushing new version...";
+        .\choco push "nvidia-geforce-now.$newver.nupkg" --source=https://chocolatey.org/ --apikey=$apiKey
+    }
 }
