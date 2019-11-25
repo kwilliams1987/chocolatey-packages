@@ -22,6 +22,7 @@ Your favorite titles load faster and stay up-to-date with the latest patches whe
 This package always installs the latest version of GeForce NOW, regardless of the version specified in the package.
     </description>
     <projectUrl>https://www.nvidia.com/en-us/geforce/products/geforce-now/</projectUrl>
+    <packageSourceUrl>https://github.com/kwilliams1987/nvidia-geforce-now</packageSourceUrl>
     <docsUrl>https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/geforce-now/mac/geforce-now-mac-qsg.pdf</docsUrl>
     <mailingListUrl>https://www.nvidia.com/en-us/geforce/forums/gfn-for-pc/22/</mailingListUrl>
     <tags>games streaming geforce nvidia</tags>
