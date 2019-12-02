@@ -4,6 +4,8 @@ My custom build Chocolatey Packages.
 ## NVIDIA GeForce Now
 An auto-installer for the NVIDIA GeForce Now streaming software.
 
+`choco install nvidia-geforce-now`
+
 [Source Code](https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/nvidia-geforce-now)
 
 [Package](https://chocolatey.org/packages/nvidia-geforce-now)
@@ -14,6 +16,8 @@ Since NVIDIA has a very fast release cycle for it's software, the package is tes
 
 ## PHP Manager for IIS
 PHP version manager for Internet Information Services.
+
+`choco install php-manager`
 
 [Source Code](https://github.com/phpmanager/phpmanager/tree/master/Chocolatey)
 
