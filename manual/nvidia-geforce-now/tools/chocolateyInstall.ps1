@@ -9,4 +9,3 @@ $shimIgnores = @("GeForceNOW-release.exe", "GeforceNOW\GeforceNow_Installer.exe"
 foreach ($ignore in $shimIgnores) {
     New-Item "$toolsDir\$ignore.ignore" -type file -force | out-null
 }
-
