@@ -12,7 +12,20 @@ An auto-installer for the NVIDIA GeForce Now streaming software.
 
 [Homepage](https://www.nvidia.com/en-gb/geforce/products/geforce-now/)
 
-Since NVIDIA has a very fast release cycle for it's software, the package is tested at least once a week on a Monday. A new package will be generated more often if someone reports the installer is broken.
+Since NVIDIA has a very fast release cycle for it's software, the package is tested at least once a week on a Monday.
+
+A new package will be generated more often if someone reports the installer is broken.
+
+## Aurora - Unified Lighting Effects
+Unified Lighting effects for a wide range of 3rd party interfaces.
+
+`choco install project-aurora`
+
+[Source Code](https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/project-aurora)
+
+[Package](https://chocolatey.org/packages/project-aurora)
+
+[Homepage](http://www.project-aurora.com/)
 
 ## PHP Manager for IIS
 PHP version manager for Internet Information Services.
