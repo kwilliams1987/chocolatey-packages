@@ -67,5 +67,6 @@ if ($local -eq $online) {
     {
         Write-Host "Pushing new version...";
         & choco push "nvidia-geforce-now.$newver.nupkg" --source=https://chocolatey.org/ --apikey=$apiKey | Out-Null
+        Write-Host "Upload Complete";
     }
 }
