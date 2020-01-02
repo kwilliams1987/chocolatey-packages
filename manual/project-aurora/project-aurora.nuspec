@@ -67,7 +67,9 @@
     <tags>rgb logitech corsair razer clevo cooler master steelseries wooting roccat alienware playStation drevo soundblaster asus yeelight nzxt</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/antonpup/Aurora/master/Project-Aurora/Project-Aurora/Resources/aurora_logo_256x256.png</iconUrl>
-	<dependencies />
+	<dependencies>
+    <dependency id="vcredist2017" />
+  </dependencies>
   </metadata>
   <files>
 	  <file src="tools\**" target="tools" />
