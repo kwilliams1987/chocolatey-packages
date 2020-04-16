@@ -1,3 +1,5 @@
+param ($apikey);
+
 Set-StrictMode -Version Latest
 
 $source = "https://download.nvidia.com/gfnpc/GeForceNOW-release.exe";
@@ -59,9 +61,11 @@ if ($local -eq $online) {
     Write-Host "Repackaging...";
     .\pack.cmd | Out-Null
 
-    $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;
-    $apiKeyPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($apiKeySecure);
-    $apiKey = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($apiKeyPtr);
+    if ($apiKey -eq "" -or $null -eq $apiKey) {
+        $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;
+        $apiKeyPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($apiKeySecure);
+        $apiKey = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($apiKeyPtr);
+    }
 
     if ($apiKey -ne "" -and $null -ne $apiKey) 
     {

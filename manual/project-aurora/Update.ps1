@@ -1,3 +1,5 @@
+param($apikey);
+
 Set-StrictMode -Version Latest
 
 $source = "https://github.com/antonpup/Aurora/releases/latest";
@@ -44,9 +46,11 @@ $online = (Get-FileHash $target -Algorithm SHA256).Hash.ToLower();
 Write-Host "Repackaging...";
 .\pack.cmd | Out-Null
 
-$apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;
-$apiKeyPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($apiKeySecure);
-$apiKey = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($apiKeyPtr);
+if ($apikey -eq "" -or $null -eq $apikey) {
+    $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;
+    $apiKeyPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($apiKeySecure);
+    $apiKey = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($apiKeyPtr);
+}
 
 if ($apiKey -ne "" -and $null -ne $apiKey) 
 {
