@@ -3,7 +3,7 @@
   <metadata>
     <id>nvidia-geforce-now</id>
     <title>Nvidia GeForce NOW</title>
-    <version>2.0.19.72</version>
+    <version>2.0.19.78</version>
     <authors>Nvidia Corporation</authors>
     <owners>Kristian Williams</owners>
     <summary>Web based game streaming, powered by NVIDIA.</summary>
@@ -25,9 +25,10 @@ This package always installs the latest version of GeForce NOW, regardless of th
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/nvidia-geforce-now</packageSourceUrl>
     <docsUrl>https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/geforce-now/mac/geforce-now-mac-qsg.pdf</docsUrl>
     <mailingListUrl>https://www.nvidia.com/en-us/geforce/forums/gfn-for-pc/22/</mailingListUrl>
+    <licenseUrl>https://www.nvidia.com/en-us/drivers/nvidia-license/</licenseUrl>
     <tags>games streaming geforce nvidia</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/kwilliams1987/chocolatey-packages/manual/nvidia-geforce-now/resources/icon.ico</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/kwilliams1987/chocolatey-packages/manual/nvidia-geforce-now/resources/icon.png</iconUrl>
 	<dependencies />
   </metadata>
   <files>
