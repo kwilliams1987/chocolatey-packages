@@ -1,5 +1,6 @@
 param($apikey);
 
+$source = Get-Location
 $updaters = Get-ChildItem *\Update.ps1 -Recurse
 
 foreach ($updater in $updaters) {
@@ -8,3 +9,5 @@ foreach ($updater in $updaters) {
     Set-Location $updater.Directory
     .\Update.ps1 -apiKey $apikey
 }
+
+Set-Location $source
