@@ -10,7 +10,7 @@ if ($null -eq $apikey -and $null -ne $env:CHOCO_API_KEY) {
 }
 
 if ($null -eq $apikey -and $null -eq $env:CHOCO_API_KEY) {
-    Write-Host "No API key available, updated packages will not be published." -ForegroundColor Orange
+    Write-Host "No API key available, updated packages will not be published." -ForegroundColor DarkYellow
 }
 
 $source = Get-Location
