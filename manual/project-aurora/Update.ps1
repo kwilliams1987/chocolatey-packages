@@ -21,6 +21,7 @@ Write-Host "Current package version: $pkgver";
 Write-Host "Newest package version: $newver";
 
 if ($pkgver -eq $newver) {
+    $host.SetShouldExit(0);
     Write-Host "No update available.";
     exit;
 }
@@ -57,4 +58,5 @@ if ($apiKey -ne "" -and $null -ne $apiKey)
     Write-Host "Pushing new version...";
     & choco push "project-aurora.$newver.nupkg" --source=https://chocolatey.org/ --apikey=$apiKey | Out-Null
     Write-Host "Upload Complete";
+    $host.SetShouldExit(1);
 }

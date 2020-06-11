@@ -29,48 +29,53 @@ Write-Host "Local Hash: $local"
 Write-Host "Online Hash: $online"
 
 if ($local -eq $online) {
-    Write-Host "No update available.";
-} else {
-    Write-Host "New version available!";
+    $host.SetShouldExit(0);
+    Write-Host "No update available." -ForegroundColor Green;
+    exit;
+} 
 
-    $7zip = Get-Command "7z.exe" -ErrorAction SilentlyContinue;
-    if ($null -eq $7zip) 
-    { 
-        Write-Error "Unable to find 7z.exe in your PATH.";
-        exit;
-    }
+Write-Host "New version available!";
 
-    Write-Host "Expanding self-extracting executable.";
-    
-    & $7zip.Source e -o"$unzip" "$target" "GeForceNOW.exe" -r  | Out-Null;
-    $pkgmatch = (Select-String -Path .\nvidia-geforce-now.nuspec -Pattern $vregex | Select-Object -First 1).Matches.Groups;
-    $pkgver = $pkgmatch[1].Value;
-    $newver = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("$unzip\GeForceNOW.exe").ProductVersion;
+$7zip = Get-Command "7z.exe" -ErrorAction SilentlyContinue;
+if ($null -eq $7zip) 
+{ 
+    Write-Error "Unable to find 7z.exe in your PATH.";
+    $host.SetShouldExit(2);
+    exit;
+}
 
-    Write-Host "Current package version: $pkgver";
-    Write-Host "New package version: $newver";
+Write-Host "Expanding self-extracting executable.";
 
-    if ($pkgver -eq $newver) {
-        Write-Error "Unable to auto-increment, package versions are the same!";
-        exit;
-    }
+& $7zip.Source e -o"$unzip" "$target" "GeForceNOW.exe" -r  | Out-Null;
+$pkgmatch = (Select-String -Path .\nvidia-geforce-now.nuspec -Pattern $vregex | Select-Object -First 1).Matches.Groups;
+$pkgver = $pkgmatch[1].Value;
+$newver = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("$unzip\GeForceNOW.exe").ProductVersion;
 
-    ((Get-Content -Path ".\tools\chocolateyInstall.ps1" -Raw) -replace $local, $online).Trim() | Set-Content ".\tools\chocolateyInstall.ps1";
-    ((Get-Content -Path ".\nvidia-geforce-now.nuspec" -Raw) -replace $pkgver, $newver).Trim() | Set-Content ".\nvidia-geforce-now.nuspec";
+Write-Host "Current package version: $pkgver";
+Write-Host "New package version: $newver";
 
-    Write-Host "Repackaging...";
-    .\pack.cmd | Out-Null
+if ($pkgver -eq $newver) {
+    Write-Error "Unable to auto-increment, package versions are the same!" -ForegroundColor DarkYellow;
+    $host.SetShouldExit(2);
+    exit;
+}
 
-    if ($apiKey -eq "" -or $null -eq $apiKey) {
-        $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;
-        $apiKeyPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($apiKeySecure);
-        $apiKey = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($apiKeyPtr);
-    }
+((Get-Content -Path ".\tools\chocolateyInstall.ps1" -Raw) -replace $local, $online).Trim() | Set-Content ".\tools\chocolateyInstall.ps1";
+((Get-Content -Path ".\nvidia-geforce-now.nuspec" -Raw) -replace $pkgver, $newver).Trim() | Set-Content ".\nvidia-geforce-now.nuspec";
 
-    if ($apiKey -ne "" -and $null -ne $apiKey) 
-    {
-        Write-Host "Pushing new version...";
-        & choco push "nvidia-geforce-now.$newver.nupkg" --source=https://chocolatey.org/ --apikey=$apiKey | Out-Null
-        Write-Host "Upload Complete";
-    }
+Write-Host "Repackaging...";
+.\pack.cmd | Out-Null
+
+if ($apiKey -eq "" -or $null -eq $apiKey) {
+    $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;
+    $apiKeyPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($apiKeySecure);
+    $apiKey = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($apiKeyPtr);
+}
+
+if ($apiKey -ne "" -and $null -ne $apiKey) 
+{
+    Write-Host "Pushing new version...";
+    & choco push "nvidia-geforce-now.$newver.nupkg" --source=https://chocolatey.org/ --apikey=$apiKey | Out-Null
+    Write-Host "Upload Complete" -ForegroundColor Green;
+    $host.SetShouldExit(1);
 }
