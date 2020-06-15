@@ -1,3 +1,3 @@
 Install-ChocolateyPackage "Project Aurora" "exe" "/silent" `
-    "https://github.com/antonpup/Aurora/releases/download/v0.7.2/Aurora-setup-v0.7.2.exe" `
-    -checksum "c874f8c18dea2eeca5f8dfa24e8187dd582f5a6ce854341e52a71f63c1253506" -checksumType "sha256"
+    "https://github.com/antonpup/Aurora/releases/download/v0.8.1/Aurora-setup-v0.8.1.exe" `
+    -checksum "2f38c350cfd8aa7bdf938348bbf3e01e62d5e411d73db8ba325e0bcbb8b0dd99" -checksumType "sha256"

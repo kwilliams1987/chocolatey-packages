@@ -3,7 +3,7 @@
   <metadata>
     <id>project-aurora</id>
     <title>Aurora - Unified Lighting Effects</title>
-    <version>0.7.2</version>
+    <version>0.8.1</version>
     <authors>Anton Pupkov</authors>
     <owners>Kristian Williams</owners>
     <summary>Unified lighting effects for Logitech, Corsair, Razer, Clevo, Cooler Master, Steelseries, Wooting, Roccat, Alienware, PlayStation 4, Drevo, Soundblaster X, Asus, Yeelight and NZXT ecosystems.</summary>
@@ -59,7 +59,7 @@
 - The Talos Principle
 - The Witcher 3
     </description>
-    <releaseNotes>https://github.com/antonpup/Aurora/releases/tag/v0.7.2</releaseNotes>
+    <releaseNotes>https://github.com/antonpup/Aurora/releases/tag/v0.8.1</releaseNotes>
     <projectUrl>https://www.project-aurora.com/index.html</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/project-aurora</packageSourceUrl>
     <docsUrl>https://www.project-aurora.com/help.html</docsUrl>
