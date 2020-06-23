@@ -69,7 +69,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/antonpup/Aurora/master/Project-Aurora/Project-Aurora/Resources/aurora_logo_256x256.png</iconUrl>
 	<dependencies>
-    <dependency id="vcredist2017" />
+    <dependency id="vcredist140" version="14.10.25008.0" />
   </dependencies>
   </metadata>
   <files>
