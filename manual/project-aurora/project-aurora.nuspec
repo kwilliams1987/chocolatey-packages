@@ -64,6 +64,7 @@
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/project-aurora</packageSourceUrl>
     <docsUrl>https://www.project-aurora.com/help.html</docsUrl>
     <mailingListUrl>https://github.com/antonpup/Aurora/issues</mailingListUrl>
+    <licenseUrl>https://github.com/antonpup/Aurora/blob/master/LICENSE</licenseUrl>
     <tags>rgb logitech corsair razer clevo cooler master steelseries wooting roccat alienware playStation drevo soundblaster asus yeelight nzxt</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/antonpup/Aurora/master/Project-Aurora/Project-Aurora/Resources/aurora_logo_256x256.png</iconUrl>
