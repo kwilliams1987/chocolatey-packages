@@ -31,7 +31,7 @@ Write-Host "Online Hash: $online"
 if ($local -eq $online) {
     $host.SetShouldExit(0);
     Write-Host "No update available." -ForegroundColor Green;
-    exit;
+    return;
 } 
 
 Write-Host "New version available!";
@@ -41,7 +41,7 @@ if ($null -eq $7zip)
 { 
     Write-Error "Unable to find 7z.exe in your PATH.";
     $host.SetShouldExit(2);
-    exit;
+    return;
 }
 
 Write-Host "Expanding self-extracting executable.";
