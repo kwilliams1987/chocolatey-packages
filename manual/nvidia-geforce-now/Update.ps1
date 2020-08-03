@@ -46,7 +46,7 @@ if ($null -eq $7zip)
 
 Write-Host "Expanding self-extracting executable.";
 
-& $7zip.Source e -o"$unzip" "$target" "GeForceNOW.exe" -r  | Out-Null;
+& $7zip.Source e -o "$unzip" "$target" "GeForceNOW.exe" -r  | Out-Null;
 $pkgmatch = (Select-String -Path .\nvidia-geforce-now.nuspec -Pattern $vregex | Select-Object -First 1).Matches.Groups;
 $pkgver = $pkgmatch[1].Value;
 $newver = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("$unzip\GeForceNOW.exe").ProductVersion;

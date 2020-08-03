@@ -22,7 +22,7 @@ Write-Host "Newest package version: $newver";
 
 if ($pkgver -eq $newver) {
     $host.SetShouldExit(0);
-    Write-Host "No update available.";
+    Write-Host "No update available." -ForegroundColor Green;
     return;
 }
 
