@@ -1,0 +1,29 @@
+# Check for updates to upstream sources and update the Chocolatey packages automatically.
+
+name: Auto-update Packages
+
+on:
+  schedule:
+    - cron: 0 6 * * *
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Update All
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: Update-All.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        got commit -m "Automatically updated packages."
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
