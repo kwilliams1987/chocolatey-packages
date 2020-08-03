@@ -1,4 +1,4 @@
-param($choco, $github);
+param($choco);
 
 if ($null -ne $choco -and $null -ne $env:CHOCO_API_KEY) {
     Write-Host "Overriding API Key from CHOCO_API_KEY environment variable with parameter." -ForegroundColor Yellow
