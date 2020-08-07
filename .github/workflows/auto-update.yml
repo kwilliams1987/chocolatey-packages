@@ -14,10 +14,14 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Update All
+    - name: Update NVIDIA GeForce NOW
       uses: Amadevus/pwsh-script@v1.0.0
       with:
-        script: .\Update-All.ps1 ${{ secrets.CHOCO_API_KEY }}
+        script: .\manual\nvidia-geforce-now\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Update Project Aurora
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\project-aurora\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
