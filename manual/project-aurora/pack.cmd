@@ -1,2 +1,0 @@
-del *.nupkg
-choco pack
