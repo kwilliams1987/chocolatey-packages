@@ -2,6 +2,8 @@ param ($apikey);
 
 Set-StrictMode -Version Latest
 
+$ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
+
 $source = "https://download.nvidia.com/gfnpc/GeForceNOW-release.exe";
 $target = "$env:TEMP\GeForceNOW-release.exe";
 $unzip  = "$env:TEMP\geforcenow";
@@ -22,7 +24,7 @@ if (Test-Path $unzip -PathType Container) {
 Write-Host "Downloading latest GeForceNOW installer.";
 Invoke-WebRequest -Uri $source -OutFile $target;
 
-$local = (Select-String -Path ".\tools\chocolateyInstall.ps1" -Pattern $cregex | Select-Object -First 1).Matches.Groups[1].Value.ToLower();
+$local = (Select-String -Path "$ScriptDir\tools\chocolateyInstall.ps1" -Pattern $cregex | Select-Object -First 1).Matches.Groups[1].Value.ToLower();
 $online = (Get-FileHash $target -Algorithm SHA256).Hash.ToLower();
 
 Write-Host "Local Hash: $local"
@@ -47,7 +49,7 @@ if ($null -eq $7zip)
 Write-Host "Expanding self-extracting executable.";
 
 & $7zip.Source e -o"$unzip" "$target" "GeForceNOW.exe" -r  | Out-Null;
-$pkgmatch = (Select-String -Path .\nvidia-geforce-now.nuspec -Pattern $vregex | Select-Object -First 1).Matches.Groups;
+$pkgmatch = (Select-String -Path $ScriptDir\nvidia-geforce-now.nuspec -Pattern $vregex | Select-Object -First 1).Matches.Groups;
 $pkgver = $pkgmatch[1].Value;
 $newver = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("$unzip\GeForceNOW.exe").ProductVersion;
 
@@ -60,11 +62,11 @@ if ($pkgver -eq $newver) {
     exit;
 }
 
-((Get-Content -Path ".\tools\chocolateyInstall.ps1" -Raw) -replace $local, $online).Trim() | Set-Content ".\tools\chocolateyInstall.ps1";
-((Get-Content -Path ".\nvidia-geforce-now.nuspec" -Raw) -replace $pkgver, $newver).Trim() | Set-Content ".\nvidia-geforce-now.nuspec";
+((Get-Content -Path "$ScriptDir\tools\chocolateyInstall.ps1" -Raw) -replace $local, $online).Trim() | Set-Content "$ScriptDir\tools\chocolateyInstall.ps1";
+((Get-Content -Path "$ScriptDir\nvidia-geforce-now.nuspec" -Raw) -replace $pkgver, $newver).Trim() | Set-Content "$ScriptDir\nvidia-geforce-now.nuspec";
 
 Write-Host "Repackaging...";
-.\pack.cmd | Out-Null
+& $ScriptDir\pack.cmd | Out-Null
 
 if ($apiKey -eq "" -or $null -eq $apiKey) {
     $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;

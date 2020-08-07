@@ -2,6 +2,8 @@ param($apikey);
 
 Set-StrictMode -Version Latest
 
+$ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
+
 $source = "https://github.com/antonpup/Aurora/releases/latest";
 $template = "https://github.com/antonpup/Aurora/releases/download/v{0}/Aurora-setup-v{0}.exe";
 $target = "$env:TEMP\Aurora-setup.exe";
@@ -12,7 +14,7 @@ $vregex = "<version>([0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?)</version>";
 Write-Host "Finding latest version on Github.";
 $segments = [System.Net.WebRequest]::Create($source).GetResponse().ResponseUri.Segments;
 
-$pkgmatch = (Select-String -Path .\project-aurora.nuspec -Pattern $vregex | Select-Object -First 1).Matches.Groups;
+$pkgmatch = (Select-String -Path $ScriptDir\project-aurora.nuspec -Pattern $vregex | Select-Object -First 1).Matches.Groups;
 $pkgver = $pkgmatch[1].Value;
 # Substring(1) to remove "v".
 $newver = $segments[-1].Substring(1);
@@ -36,16 +38,16 @@ if (Test-Path $target -PathType Leaf) {
 Write-Host "Downloading latest Aurora installer.";
 Invoke-WebRequest -Uri $template.Replace("{0}", $newver) -OutFile $target;
 
-$local = (Select-String -Path ".\tools\chocolateyInstall.ps1" -Pattern $cregex | Select-Object -First 1).Matches.Groups[1].Value.ToLower();
+$local = (Select-String -Path "$ScriptDir\tools\chocolateyInstall.ps1" -Pattern $cregex | Select-Object -First 1).Matches.Groups[1].Value.ToLower();
 $online = (Get-FileHash $target -Algorithm SHA256).Hash.ToLower();
 
-((Get-Content -Path ".\tools\chocolateyInstall.ps1" -Raw) -replace $local, $online).Trim() | Set-Content ".\tools\chocolateyInstall.ps1";
-((Get-Content -Path ".\tools\chocolateyInstall.ps1" -Raw) -replace $pkgver, $newver).Trim() | Set-Content ".\tools\chocolateyInstall.ps1";
+((Get-Content -Path "$ScriptDir\tools\chocolateyInstall.ps1" -Raw) -replace $local, $online).Trim() | Set-Content "$ScriptDir\tools\chocolateyInstall.ps1";
+((Get-Content -Path "$ScriptDir\tools\chocolateyInstall.ps1" -Raw) -replace $pkgver, $newver).Trim() | Set-Content "$ScriptDir\tools\chocolateyInstall.ps1";
 
-((Get-Content -Path ".\project-aurora.nuspec" -Raw) -replace $pkgver, $newver).Trim() | Set-Content ".\project-aurora.nuspec";
+((Get-Content -Path "$ScriptDir\project-aurora.nuspec" -Raw) -replace $pkgver, $newver).Trim() | Set-Content "$ScriptDir\project-aurora.nuspec";
 
 Write-Host "Repackaging...";
-.\pack.cmd | Out-Null
+& $ScriptDir\pack.cmd | Out-Null
 
 if ($apikey -eq "" -or $null -eq $apikey) {
     $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;

@@ -26,15 +26,15 @@ if ($null -eq $github -and $null -eq $env:GITHUB_API_KEY) {
     Write-Host "No Github API key available, updated packages will not be commited." -ForegroundColor DarkYellow
 }
 
-$source = Get-Location
 $updaters = Get-ChildItem *\Update.ps1 -Recurse
 $updates = @();
+$updateParams = "-apiKey", $choco;
 
 foreach ($updater in $updaters) {
     $project = $updater.Directory.Name
     Write-Host "Checking for $project updates..."
-    Set-Location $updater.Directory
-    $update =  &{ .\Update.ps1 -apiKey $choco };
+    
+    $update =  & $updater $updateParams;
     if($update -eq 1) {
         Write-Host "The updater reported an update for $project." -ForegroundColor Green
         $updates += $project;
@@ -55,5 +55,3 @@ if ($updates.Count -gt 0) {
         & git commit -m "Updated packages: $updates"
     }
 }
-
-Set-Location $source
