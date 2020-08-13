@@ -24,10 +24,13 @@ jobs:
         script: .\manual\project-aurora\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
     - name: Commit changes
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Automatically updated packages."
-      continue-on-error: true
+        $changes = (git status --porcelain)
+        if ($changes.Length -gt 0)
+        {
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Automatically updated packages."
+        }
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
