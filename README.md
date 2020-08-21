@@ -1,6 +1,9 @@
 # chocolatey-packages
 My custom build Chocolatey Packages.
 
+# Automatic Updates
+A Github Action is executed every day at 06:00 UTC to check for updates to all packages except PHP Manager for IIS.
+
 ## NVIDIA GeForce Now
 An auto-installer for the NVIDIA GeForce Now streaming software.
 
