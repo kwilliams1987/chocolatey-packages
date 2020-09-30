@@ -30,6 +30,17 @@ Unified Lighting effects for a wide range of 3rd party interfaces.
 
 [Homepage](http://www.project-aurora.com/)
 
+## Ajour
+Unified World of Warcraft addon manager.
+
+`choco install ajour`
+
+[Source Code](https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/ajour)
+
+[Package](https://chocolatey.org/packages/ajour)
+
+[Homepage](https://www.getajour.com/)
+
 ## PHP Manager for IIS
 PHP version manager for Internet Information Services.
 

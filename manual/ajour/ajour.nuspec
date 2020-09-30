@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>ajour</id>
+    <title>Ajour</title>
+    <version>0.0.1</version>
+    <authors>Casper Rogild Storm</authors>
+    <owners>Kristian Williams</owners>
+    <summary>Unified World of Warcraft addon manager.</summary>
+    <description>## Features
+
+- Addons will be parsed automatically and resolved from multiple repositories:
+  - [tukui.org](https://www.tukui.org/)
+  - [curse](https://www.curseforge.com/wow/addons)
+- Support for release channels, so it's possible to select either `alpha`, `beta` or `stable` for each addon
+- Bulk addon update without any limitations
+- Remove addons and their dependencies
+- Ignore addons you don't want to update
+- Supports both Retail and Classic version of World of Warcraft
+- [Create your own custom themes](./THEMES.md)
+- Ability to backup your whole UI, including all settings from WTF
+    </description>
+    <releaseNotes>https://github.com/casperstorm/ajour/releases/tag/0.0.1</releaseNotes>
+    <projectUrl>https://www.getajour.com/</projectUrl>
+    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/ajour</packageSourceUrl>
+    <docsUrl>https://github.com/casperstorm/ajour/wiki</docsUrl>
+    <mailingListUrl>https://github.com/casperstorm/ajour/issues</mailingListUrl>
+    <tags>world of warcraft tukui curse addon</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/casperstorm/ajour/master/resources/logo/256x256/ajour.png</iconUrl>
+    <dependencies />
+  </metadata>
+  <files>
+	  <file src="tools\**" target="tools" />
+  </files>
+</package>
