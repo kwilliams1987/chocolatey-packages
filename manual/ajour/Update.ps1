@@ -17,7 +17,7 @@ $segments = [System.Net.WebRequest]::Create($source).GetResponse().ResponseUri.S
 $pkgmatch = (Select-String -Path $ScriptDir\ajour.nuspec -Pattern $vregex | Select-Object -First 1).Matches.Groups;
 $pkgver = $pkgmatch[1].Value;
 # Substring(1) to remove "v".
-$newver = $segments[-1].Substring(1);
+$newver = $segments[-1];
 
 Write-Host "Current package version: $pkgver";
 Write-Host "Newest package version: $newver";

@@ -1,3 +1,3 @@
 Install-ChocolateyPackage "Project Aurora" "exe" "/silent" `
-    "https://github.com/casperstorm/ajour/releases/download/0.0.1/ajour.exe" `
-    -checksum "2f38c350cfd8aa7bdf938348bbf3e01e62d5e411d73db8ba325e0bcbb8b0dd99" -checksumType "sha256"
+    "https://github.com/casperstorm/ajour/releases/download/0.3.4/ajour.exe" `
+    -checksum "f2386f07ee5f90fe30279a4c996cd48490222cd9b8dc79260c92fa177371718a" -checksumType "sha256"
