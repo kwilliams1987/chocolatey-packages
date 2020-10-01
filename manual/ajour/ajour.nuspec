@@ -17,7 +17,7 @@
 - Remove addons and their dependencies
 - Ignore addons you don't want to update
 - Supports both Retail and Classic version of World of Warcraft
-- [Create your own custom themes](./THEMES.md)
+- [Create your own custom themes](https://github.com/casperstorm/ajour/blob/master/THEMES.md)
 - Ability to backup your whole UI, including all settings from WTF
     </description>
     <releaseNotes>https://github.com/casperstorm/ajour/releases/tag/0.3.4</releaseNotes>
@@ -25,7 +25,7 @@
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/ajour</packageSourceUrl>
     <docsUrl>https://github.com/casperstorm/ajour/wiki</docsUrl>
     <mailingListUrl>https://github.com/casperstorm/ajour/issues</mailingListUrl>
-    <tags>world of warcraft tukui curse addon</tags>
+    <tags>world-of-warcraft tukui curse addon mod</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/casperstorm/ajour/master/resources/logo/256x256/ajour.png</iconUrl>
     <dependencies />
