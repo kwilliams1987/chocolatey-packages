@@ -22,6 +22,10 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\project-aurora\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Update Ajour
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\ajour\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
     - name: Commit changes
       run: |
         $changes = (git status --porcelain)
