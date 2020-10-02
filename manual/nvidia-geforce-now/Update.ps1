@@ -5,21 +5,11 @@ Set-StrictMode -Version Latest
 $ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
 
 $source = "https://download.nvidia.com/gfnpc/GeForceNOW-release.exe";
-$target = "$env:TEMP\GeForceNOW-release.exe";
-$unzip  = "$env:TEMP\geforcenow";
+$target = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
+$unzip  = "$env:TEMP\" + [System.IO.Path]::GetFileNameWithoutExtension([System.IO.Path]::GetRandomFileName());
 
 $cregex = "-Checksum '([a-fA-F0-9]{64})'";
 $vregex = "<version>([0-9]+\.[0-9]+\.[0-9]+\.([0-9]+))</version>";
-
-if (Test-Path $target -PathType Leaf) {
-    Write-Host "Removing old GeForceNOW installer.";
-    Remove-Item $target -Force;
-}
-
-if (Test-Path $unzip -PathType Container) {
-    Write-Host "Removing old unzip directory.";
-    Remove-Item $unzip -Force -Recurse;
-}
 
 Write-Host "Downloading latest GeForceNOW installer.";
 Invoke-WebRequest -Uri $source -OutFile $target;
@@ -40,7 +30,7 @@ Write-Host "New version available!";
 
 $7zip = Get-Command "7z.exe" -ErrorAction SilentlyContinue;
 if ($null -eq $7zip) 
-{ 
+{
     Write-Error "Unable to find 7z.exe in your PATH.";
     $host.SetShouldExit(2);
     return;
@@ -68,6 +58,16 @@ if ($pkgver -eq $newver) {
 Write-Host "Repackaging...";
 Remove-Item $ScriptDir\*.nupkg
 & choco pack $ScriptDir\nvidia-geforce-now.nuspec
+
+if (Test-Path $target -PathType Leaf) {
+    Write-Host "Cleaning up temp files...";
+    Remove-Item $target -Force;
+}
+
+if (Test-Path $unzip -PathType Container) {
+    Write-Host "Cleaning up temp directories...";
+    Remove-Item $unzip -Force -Recurse;
+}
 
 if ($apiKey -eq "" -or $null -eq $apiKey) {
     $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;

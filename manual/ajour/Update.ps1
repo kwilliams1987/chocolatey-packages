@@ -6,9 +6,9 @@ $ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
 
 $source = "https://github.com/casperstorm/ajour/releases/latest";
 $template = "https://github.com/casperstorm/ajour/releases/download/{0}/ajour.exe";
-$target = "$env:TEMP\ajour.exe";
+$target = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
-$cregex = "-checksum ""([a-fA-F0-9]{64})""";
+$cregex = '\$expectedHash = "([a-fA-F0-9]{64})"';
 $vregex = "<version>([0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?)</version>";
 
 Write-Host "Finding latest version on Github.";
@@ -30,11 +30,6 @@ if ($pkgver -eq $newver) {
 
 Write-Host "New version available!";
 
-if (Test-Path $target -PathType Leaf) {
-    Write-Host "Removing old Ajour installer.";
-    Remove-Item $target -Force;
-}
-
 Write-Host "Downloading latest Ajour installer.";
 Invoke-WebRequest -Uri $template.Replace("{0}", $newver) -OutFile $target;
 
@@ -49,6 +44,11 @@ $online = (Get-FileHash $target -Algorithm SHA256).Hash.ToLower();
 Write-Host "Repackaging...";
 Remove-Item $ScriptDir\*.nupkg
 & choco pack $ScriptDir\ajour.nuspec
+
+if (Test-Path $target -PathType Leaf) {
+    Write-Host "Cleaning up temp files...";
+    Remove-Item $target -Force;
+}
 
 if ($apikey -eq "" -or $null -eq $apikey) {
     $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;

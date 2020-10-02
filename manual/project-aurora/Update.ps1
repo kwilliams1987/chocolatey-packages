@@ -6,7 +6,7 @@ $ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
 
 $source = "https://github.com/antonpup/Aurora/releases/latest";
 $template = "https://github.com/antonpup/Aurora/releases/download/v{0}/Aurora-setup-v{0}.exe";
-$target = "$env:TEMP\Aurora-setup.exe";
+$target = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
 $cregex = "-checksum ""([a-fA-F0-9]{64})""";
 $vregex = "<version>([0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?)</version>";
@@ -30,11 +30,6 @@ if ($pkgver -eq $newver) {
 
 Write-Host "New version available!";
 
-if (Test-Path $target -PathType Leaf) {
-    Write-Host "Removing old Aurora installer.";
-    Remove-Item $target -Force;
-}
-
 Write-Host "Downloading latest Aurora installer.";
 Invoke-WebRequest -Uri $template.Replace("{0}", $newver) -OutFile $target;
 
@@ -49,6 +44,11 @@ $online = (Get-FileHash $target -Algorithm SHA256).Hash.ToLower();
 Write-Host "Repackaging...";
 Remove-Item $ScriptDir\*.nupkg
 & choco pack $ScriptDir\project-aurora.nuspec
+
+if (Test-Path $target -PathType Leaf) {
+    Write-Host "Cleaning up temp files...";
+    Remove-Item $target -Force;
+}
 
 if ($apikey -eq "" -or $null -eq $apikey) {
     $apiKeySecure = Read-Host "Enter a valid Chocolatey API Key to publish" -AsSecureString;
