@@ -4,9 +4,9 @@ Set-StrictMode -Version Latest
 
 $ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
 $source = "https://github.com/casperstorm/ajour/releases/latest";
-$template = "https://github.com/casperstorm/ajour/releases/download/{0}/ajour.exe";
-$packageName = "ajour";
-$programName = "Ajour";
+$template = "https://github.com/casperstorm/ajour/releases/download/{0}/ajour-opengl.exe"
+$packageName = "ajour-opengl";
+$programName = "Ajour (OpenGL)";
 $cregex = '\$expectedHash = "([a-fA-F0-9]{64})"';
 $vregex = "<version>([0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?)</version>";
 $versionOffset = 0;
@@ -61,6 +61,6 @@ if ($apiKey -ne "" -and $null -ne $apiKey)
 {
     Write-Host "Pushing new version...";
     & choco push "$packageName.$newver.nupkg" --source=https://chocolatey.org/ --apiKey=$apiKey | Out-Null
-    Write-Host "Upload Complete" -ForegroundColor Green;
+    Write-Host "Upload Complete" -ForegroundColor Green;;
     $host.SetShouldExit(1);
 }

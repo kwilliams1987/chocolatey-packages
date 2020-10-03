@@ -1,17 +1,19 @@
-param ($apikey);
+param($apiKey);
 
 Set-StrictMode -Version Latest
 
 $ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
-
 $source = "https://download.nvidia.com/gfnpc/GeForceNOW-release.exe";
-$target = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
-$unzip  = "$env:TEMP\" + [System.IO.Path]::GetFileNameWithoutExtension([System.IO.Path]::GetRandomFileName());
-
+$packageName = "nvidia-geforce-now";
+$programName = "Nvidia GeForce NOW";
 $cregex = "-Checksum '([a-fA-F0-9]{64})'";
 $vregex = "<version>([0-9]+\.[0-9]+\.[0-9]+\.([0-9]+))</version>";
 
-Write-Host "Downloading latest GeForceNOW installer.";
+$target = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
+$unzip  = "$env:TEMP\" + [System.IO.Path]::GetFileNameWithoutExtension([System.IO.Path]::GetRandomFileName());
+
+
+Write-Host "Downloading latest version of $programName.";
 Invoke-WebRequest -Uri $source -OutFile $target;
 
 $local = (Select-String -Path "$ScriptDir\tools\chocolateyInstall.ps1" -Pattern $cregex | Select-Object -First 1).Matches.Groups[1].Value.ToLower();
@@ -53,11 +55,11 @@ if ($pkgver -eq $newver) {
 }
 
 ((Get-Content -Path "$ScriptDir\tools\chocolateyInstall.ps1" -Raw) -replace $local, $online).Trim() | Set-Content "$ScriptDir\tools\chocolateyInstall.ps1";
-((Get-Content -Path "$ScriptDir\nvidia-geforce-now.nuspec" -Raw) -replace $pkgver, $newver).Trim() | Set-Content "$ScriptDir\nvidia-geforce-now.nuspec";
+((Get-Content -Path "$ScriptDir\$packageName.nuspec" -Raw) -replace $pkgver, $newver).Trim() | Set-Content "$ScriptDir\$packageName.nuspec";
 
 Write-Host "Repackaging...";
 Remove-Item $ScriptDir\*.nupkg
-& choco pack $ScriptDir\nvidia-geforce-now.nuspec
+& choco pack $ScriptDir\$packageName.nuspec
 
 if (Test-Path $target -PathType Leaf) {
     Write-Host "Cleaning up temp files...";
@@ -78,7 +80,7 @@ if ($apiKey -eq "" -or $null -eq $apiKey) {
 if ($apiKey -ne "" -and $null -ne $apiKey) 
 {
     Write-Host "Pushing new version...";
-    & choco push "nvidia-geforce-now.$newver.nupkg" --source=https://chocolatey.org/ --apikey=$apiKey | Out-Null
+    & choco push "$packageName.$newver.nupkg" --source=https://chocolatey.org/ --apiKey=$apiKey | Out-Null
     Write-Host "Upload Complete" -ForegroundColor Green;
     $host.SetShouldExit(1);
 }
