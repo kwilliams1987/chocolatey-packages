@@ -25,7 +25,11 @@ jobs:
     - name: Update Ajour
       uses: Amadevus/pwsh-script@v1.0.0
       with:
-        script: .\manual\ajour\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+        script: .\manual\ajour\Update.ps1 ${{ secrets.CHOCO_API_KEY }}  
+    - name: Update Ajour (OpenGL)
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\ajour-opengl\Update.ps1 ${{ secrets.CHOCO_API_KEY }}  
     - name: Commit changes
       run: |
         $changes = (git status --porcelain)
