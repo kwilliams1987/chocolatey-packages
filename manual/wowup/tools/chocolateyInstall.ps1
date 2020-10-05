@@ -1,9 +1,9 @@
-$expectedHash = "0000000000000000000000000000000000000000000000000000000000000000";
+$expectedHash = "43e9894123e4b8f11d8bc759e5009980991e9c9c7e7227d8bdf31c3e5685e63f";
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)";
 $fileName = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
 Get-ChocolateyWebFile -PackageName 'WowUp' -FileFullPath "$fileName" `
-    -Url 'https://github.com/jliddev/WowUp/releases/download/v0.0.0/WowUp.zip';
+    -Url 'https://github.com/jliddev/WowUp/releases/download/v1.18.0/WowUp.zip';
 
 $hash = (Get-FileHash "$fileName" -Algorithm SHA256).Hash.ToLower();
 
