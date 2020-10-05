@@ -18,19 +18,7 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\nvidia-geforce-now\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
-    - name: Update Project Aurora
-      uses: Amadevus/pwsh-script@v1.0.0
-      with:
-        script: .\manual\project-aurora\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
-    - name: Update Ajour
-      uses: Amadevus/pwsh-script@v1.0.0
-      with:
-        script: .\manual\ajour\Update.ps1 ${{ secrets.CHOCO_API_KEY }}  
-    - name: Update Ajour (OpenGL)
-      uses: Amadevus/pwsh-script@v1.0.0
-      with:
-        script: .\manual\ajour-opengl\Update.ps1 ${{ secrets.CHOCO_API_KEY }}  
-    - name: Commit changes
+    - name: Commit NVIDIA GeForce NOW changes
       run: |
         $changes = (git status --porcelain)
         if ($changes.Length -gt 0)
@@ -38,7 +26,63 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git commit -m "Automatically updated packages."
+          git commit -m "Automatically updated NVIDIA GeForce NOW."
+        }
+    - name: Update Project Aurora
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\project-aurora\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Commit Project Aurora changes
+      run: |
+        $changes = (git status --porcelain)
+        if ($changes.Length -gt 0)
+        {
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Automatically updated Project Aurora."
+        }
+    - name: Update Ajour
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\ajour\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Commit Ajour changes
+      run: |
+        $changes = (git status --porcelain)
+        if ($changes.Length -gt 0)
+        {
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Automatically updated Ajour."
+        }
+    - name: Update Ajour (OpenGL)
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\ajour-opengl\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Commit Ajour (OpenGL)
+      run: |
+        $changes = (git status --porcelain)
+        if ($changes.Length -gt 0)
+        {
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Automatically updated Ajpur (Open GL)."
+        }
+    - name: Update WowUp
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\wowup\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Commit WowUp
+      run: |
+        $changes = (git status --porcelain)
+        if ($changes.Length -gt 0)
+        {
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Automatically updated WowUp."
         }
     - name: Push changes
       uses: ad-m/github-push-action@master
