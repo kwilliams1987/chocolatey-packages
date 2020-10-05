@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>wowup</id>
+    <title>WowUp</title>
+    <version>0.0.0</version>
+    <authors>jliddev</authors>
+    <owners>Kristian Williams</owners>
+    <summary>Unified World of Warcraft addon manager.</summary>
+    <description>WowUp the World of Warcraft addon updater
+
+Supports downloading mods via:
+- GitHub
+- CurseForge
+- WowInterface
+- TukUI
+    </description>
+    <releaseNotes>https://github.com/jliddev/WowUp/releases/tag/v1.18.0</releaseNotes>
+    <projectUrl>https://wowup.io/</projectUrl>
+    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/wowup</packageSourceUrl>
+    <docsUrl>https://wowup.io/faq</docsUrl>
+    <mailingListUrl>https://github.com/jliddev/WowUp/issues</mailingListUrl>
+    <tags>world-of-warcraft tukui curse github wowinterface addon mod</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://wowup.io/assets/images/wowup_logo_512np.png</iconUrl>
+    <dependencies />
+  </metadata>
+  <files>
+	  <file src="tools\**" target="tools" />
+  </files>
+</package>
