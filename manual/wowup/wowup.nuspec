@@ -23,6 +23,7 @@ Supports downloading mods via:
     <tags>world-of-warcraft tukui curse github wowinterface addon mod</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://wowup.io/assets/images/wowup_logo_512np.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/jliddev/WowUp/master/LICENSE</licenseUrl>
     <dependencies />
   </metadata>
   <files>
