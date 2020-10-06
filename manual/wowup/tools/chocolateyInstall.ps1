@@ -23,10 +23,5 @@ $shortcutPath = "$env:AllUsersProfile\Microsoft\Windows\Start Menu\Programs\WowU
 Remove-Item -Path $shortcutPath -Force -Confirm:$false -ErrorAction SilentlyContinue;
 
 Write-Host "Creating shortcut";
-
-$shell = New-Object -ComObject ("WScript.Shell");
-$shortCut = $shell.CreateShortcut($shortcutPath);
-$shortCut.TargetPath = "$toolsDir\WowUp.exe";
-$shortCut.Description = "Unified World of Warcraft Add-on Manager";
-
-$shortcut.Save();
+Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath "$toolsDir\WowUp.exe" `
+    -Description "Unified World of Warcraft Add-on Manager";
