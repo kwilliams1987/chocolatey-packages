@@ -44,7 +44,7 @@ $online = (Get-FileHash $target -Algorithm SHA256).Hash.ToLower();
 
 Write-Host "Repackaging...";
 Remove-Item $ScriptDir\*.nupkg
-& choco pack $ScriptDir\$packageName.nuspec
+& choco pack $ScriptDir\$packageName.nuspec --outputdirectory $ScriptDir
 
 if (Test-Path $target -PathType Leaf) {
     Write-Host "Cleaning up temp files...";
@@ -60,7 +60,7 @@ if ($apiKey -eq "" -or $null -eq $apiKey) {
 if ($apiKey -ne "" -and $null -ne $apiKey) 
 {
     Write-Host "Pushing new version...";
-    & choco push "$packageName.$newver.nupkg" --source=https://chocolatey.org/ --apiKey=$apiKey | Out-Null
-    Write-Host "Upload Complete" -ForegroundColor Green;;
+    & choco push "$ScriptDir\$packageName.$newver.nupkg" --source=https://chocolatey.org/ --apiKey=$apiKey | Out-Null
+    Write-Host "Upload Complete" -ForegroundColor Green;
     $host.SetShouldExit(1);
 }
