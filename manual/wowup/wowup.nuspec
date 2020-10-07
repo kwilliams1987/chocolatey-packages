@@ -3,7 +3,7 @@
   <metadata>
     <id>wowup</id>
     <title>WowUp</title>
-    <version>1.18.0</version>
+    <version>1.18.1</version>
     <authors>jliddev</authors>
     <owners>Kristian Williams</owners>
     <summary>Unified World of Warcraft addon manager.</summary>
@@ -15,7 +15,7 @@ Supports downloading mods via:
 - WowInterface
 - TukUI
     </description>
-    <releaseNotes>https://github.com/jliddev/WowUp/releases/tag/v1.18.0</releaseNotes>
+    <releaseNotes>https://github.com/jliddev/WowUp/releases/tag/v1.18.1</releaseNotes>
     <projectUrl>https://wowup.io/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/wowup</packageSourceUrl>
     <docsUrl>https://wowup.io/faq</docsUrl>
