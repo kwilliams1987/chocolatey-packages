@@ -1,0 +1,1 @@
+Get-Process -Name "ajour-opengl" -ErrorAction SilentlyContinue | Stop-Process -Force
