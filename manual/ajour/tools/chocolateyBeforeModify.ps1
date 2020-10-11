@@ -1,0 +1,1 @@
+Get-Process -Name "ajour" -ErrorAction SilentlyContinue | Stop-Process -Force
