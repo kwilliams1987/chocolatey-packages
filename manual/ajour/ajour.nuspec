@@ -3,7 +3,7 @@
   <metadata>
     <id>ajour</id>
     <title>Ajour</title>
-    <version>0.4.0</version>
+    <version>0.4.1</version>
     <authors>Casper Rogild Storm</authors>
     <owners>Kristian Williams</owners>
     <summary>Unified World of Warcraft addon manager.</summary>
@@ -20,7 +20,7 @@
 - [Create your own custom themes](https://github.com/casperstorm/ajour/blob/master/THEMES.md)
 - Ability to backup your whole UI, including all settings from WTF
     </description>
-    <releaseNotes>https://github.com/casperstorm/ajour/releases/tag/0.4.0</releaseNotes>
+    <releaseNotes>https://github.com/casperstorm/ajour/releases/tag/0.4.1</releaseNotes>
     <projectUrl>https://www.getajour.com/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/ajour</packageSourceUrl>
     <docsUrl>https://github.com/casperstorm/ajour/wiki</docsUrl>
