@@ -3,17 +3,9 @@ $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)";
 $fileName = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
 Get-ChocolateyWebFile -PackageName 'WowUp' -FileFullPath "$fileName" `
-    -Url 'https://github.com/jliddev/WowUp/releases/download/v1.18.1/WowUp.zip';
-
-$hash = (Get-FileHash "$fileName" -Algorithm SHA256).Hash.ToLower();
-
-if ($hash -ne $expectedHash) 
-{
-    Remove-Item $fileName -Force -Confirm:$false -ErrorAction SilentlyContinue;
-    Write-Error "The returned hash $hash does not match the expected one.";
-    $host.SetShouldExit(-1);
-    return;
-}
+    -Url 'https://github.com/jliddev/WowUp/releases/download/v1.18.1/WowUp.zip' `
+    -Checksum $expectedHash `
+    -ChecksumType 'sha256';
 
 Get-ChocolateyUnzip -FileFullPath $fileName -Destination $toolsDir;
 Remove-Item $fileName;
