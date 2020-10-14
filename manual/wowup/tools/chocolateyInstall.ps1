@@ -1,9 +1,9 @@
-$expectedHash = "f6b1befa4ee6fdad6590d2f86c88f82316a832b66c06a93611bcbd774a97dd70";
+$expectedHash = "158ead0c9c4d72c11a24439b1cec636d47091f16616b2b1d19c955bc027061f3";
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)";
 $fileName = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
 Get-ChocolateyWebFile -PackageName 'WowUp' -FileFullPath "$fileName" `
-    -Url 'https://github.com/jliddev/WowUp/releases/download/v1.18.1/WowUp.zip' `
+    -Url 'https://github.com/jliddev/WowUp/releases/download/v1.18.3/WowUp.zip' `
     -Checksum $expectedHash `
     -ChecksumType 'sha256';
 
