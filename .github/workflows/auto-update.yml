@@ -68,7 +68,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git commit -m "Automatically updated Ajpur (Open GL)."
+          git commit -m "Automatically updated Ajour (Open GL)."
         }
     - name: Update WowUp
       uses: Amadevus/pwsh-script@v1.0.0
