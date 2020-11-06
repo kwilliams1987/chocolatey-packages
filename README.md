@@ -70,3 +70,14 @@ Unified World of Warcraft addon manager.
 [Package](https://chocolatey.org/packages/wowup)
 
 [Homepage](https://wowup.io/)
+
+## WeakAuras Companion
+WeakAuras Companion App
+
+`choco install weakauras-companion`
+
+[Source Code](https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/weakauras-companion)
+
+[Package](https://chocolatey.org/packages/weakauras-companion)
+
+[Homepage](https://weakauras.wtf/)

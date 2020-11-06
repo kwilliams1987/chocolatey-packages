@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>weakauras-companion</id>
+    <title>WeakAuras Companion</title>
+    <version>3.0.6</version>
+    <authors>WeakAuras</authors>
+    <owners>Kristian Williams</owners>
+    <summary>WeakAuras Companion App for World of Warcraft.</summary>
+    <description>The WeakAuras Companion is an application built to provide the missing link between Wago and the WeakAuras World of Warcraft addon.
+
+It enables you to fetch updates to the auras you have installed directly from Wago, without having to manually copy-paste import strings all the time. It also makes sure you don't miss any updates, always keeping you up to date with the latest versions.
+    </description>
+    <releaseNotes>https://github.com/WeakAuras/WeakAuras-Companion/releases/tag/v3.0.6</releaseNotes>
+    <projectUrl>https://weakauras.wtf/</projectUrl>
+    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/weakauras-companion</packageSourceUrl>
+    <docsUrl>https://github.com/WeakAuras/WeakAuras-Companion</docsUrl>
+    <mailingListUrl>https://github.com/WeakAuras/WeakAuras-Companion/issues</mailingListUrl>
+    <tags>world-of-warcraft weakauras addon</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/WeakAuras/WeakAuras-Companion/master/public/bigicon.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/WeakAuras/WeakAuras-Companion/master/LICENSE</licenseUrl>
+    <dependencies />
+  </metadata>
+  <files>
+	  <file src="tools\**" target="tools" />
+  </files>
+</package>
