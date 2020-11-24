@@ -60,7 +60,7 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\ajour-opengl\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
-    - name: Commit Ajour (OpenGL)
+    - name: Commit Ajour (OpenGL) changes
       run: |
         $changes = (git status --porcelain)
         if ($changes.Length -gt 0)
@@ -74,7 +74,7 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\wowup\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
-    - name: Commit WowUp
+    - name: Commit WowUp changes
       run: |
         $changes = (git status --porcelain)
         if ($changes.Length -gt 0)
@@ -84,15 +84,11 @@ jobs:
           git add -A
           git commit -m "Automatically updated WowUp."
         }
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Update WeakAuras Companion
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\weakauras-companion\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
-    - name: Commit WeakAuras Companion
+    - name: Commit WeakAuras Companion changes
       run: |
         $changes = (git status --porcelain)
         if ($changes.Length -gt 0)
