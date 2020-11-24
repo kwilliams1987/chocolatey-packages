@@ -3,8 +3,8 @@
   <metadata>
     <id>wowup</id>
     <title>WowUp</title>
-    <version>1.19.1</version>
-    <authors>jliddev</authors>
+    <version>2.0.0</version>
+    <authors>WowUp Team</authors>
     <owners>Kristian Williams</owners>
     <summary>Unified World of Warcraft addon manager.</summary>
     <description>WowUp the World of Warcraft addon updater
@@ -15,15 +15,15 @@ Supports downloading mods via:
 - WowInterface
 - TukUI
     </description>
-    <releaseNotes>https://github.com/jliddev/WowUp/releases/tag/v1.19.1</releaseNotes>
+    <releaseNotes>https://github.com/WowUp/WowUp/releases/tag/v2.0.0</releaseNotes>
     <projectUrl>https://wowup.io/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/wowup</packageSourceUrl>
     <docsUrl>https://wowup.io/faq</docsUrl>
-    <mailingListUrl>https://github.com/jliddev/WowUp/issues</mailingListUrl>
+    <mailingListUrl>https://github.com/WowUp/WowUp/issues</mailingListUrl>
     <tags>world-of-warcraft tukui curse github wowinterface addon mod</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://wowup.io/assets/images/wowup_logo_512np.png</iconUrl>
-    <licenseUrl>https://raw.githubusercontent.com/jliddev/WowUp/master/LICENSE</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/WowUp/WowUp/master/LICENSE</licenseUrl>
     <dependencies />
   </metadata>
   <files>

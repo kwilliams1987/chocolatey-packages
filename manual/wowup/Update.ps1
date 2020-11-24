@@ -3,8 +3,8 @@ param($apiKey, $version = $null);
 Set-StrictMode -Version Latest
 
 $ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
-$source = "https://github.com/jliddev/WowUp/releases/latest";
-$template = "https://github.com/jliddev/WowUp/releases/download/v{0}/WowUp.zip";
+$source = "https://github.com/WowUp/WowUp/releases/latest";
+$template = "https://github.com/WowUp/WowUp/releases/download/v{0}/WowUp-Setup-{0}.exe";
 $packageName = "wowup";
 $programName = "WowUp";
 
