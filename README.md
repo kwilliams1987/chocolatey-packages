@@ -3,7 +3,7 @@ chocolatey-packages
 My custom build Chocolatey Packages.
 
 # Automatic Updates
-A Github Action is executed every day at 06:00 UTC to check for updates to all packages except PHP Manager for IIS.
+A Github Action is executed every six hours, starting at 06:00 UTC to check for updates to all packages except PHP Manager for IIS.
 
 ## Ajour / Ajour OpenGL
 Unified World of Warcraft addon manager.
