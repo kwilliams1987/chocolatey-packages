@@ -8,7 +8,7 @@ $template = "https://github.com/WowUp/WowUp/releases/download/v{0}/WowUp-Setup-{
 $packageName = "wowup";
 $programName = "WowUp";
 
-$cregex = '\$expectedHash = "([a-fA-F0-9]{64})"';
+$cregex = '"([a-fA-F0-9]{64})"';
 $iregex = "([0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?)";
 $vregex = "<version>$iregex</version>";
 $versionOffset = 1;
