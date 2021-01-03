@@ -1,9 +1,9 @@
-$expectedHash = "f6ce4fb014fc21e6a7f2e7fc07f2276a149d144dee5b0cb9f06b1a5e26908c15";
+$expectedHash = "6d53cc3d82b24508de9eec6b3cda4f749592c5639a53645ecdf57d5beb1244e5";
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)";
 $fileName = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
 Get-ChocolateyWebFile -PackageName 'Ajour' -FileFullPath "$fileName" `
-    -Url 'https://github.com/casperstorm/ajour/releases/download/0.6.0/ajour.exe' `
+    -Url 'https://github.com/casperstorm/ajour/releases/download/0.6.1/ajour.exe' `
     -Checksum $expectedHash `
     -ChecksumType 'sha256';
 
