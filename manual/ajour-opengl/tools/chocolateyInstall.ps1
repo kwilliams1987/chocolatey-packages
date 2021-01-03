@@ -1,9 +1,9 @@
-$expectedHash = "cd66dde53cb2ce6bea1ea83bed8ab7256674c24863b921f61f797a11b658e78d";
+$expectedHash = "1e8b29771add520d46db46cd60c2a2aec4210fe1081917b0cbf21bb258d4eb5a";
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)";
 $fileName = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
 Get-ChocolateyWebFile -PackageName 'Ajour (OpenGL)' -FileFullPath "$fileName" `
-    -Url 'https://github.com/casperstorm/ajour/releases/download/0.6.0/ajour-opengl.exe' `
+    -Url 'https://github.com/casperstorm/ajour/releases/download/0.6.1/ajour-opengl.exe' `
     -Checksum $expectedHash `
     -ChecksumType 'sha256';
 
