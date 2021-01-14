@@ -3,11 +3,11 @@ param($apiKey);
 Set-StrictMode -Version Latest
 
 $ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
-$source = "https://download.nvidia.com/gfnpc/GeForceNOW-release.exe";
-$packageName = "nvidia-geforce-now";
-$programName = "Nvidia GeForce NOW";
-$cregex = "-Checksum '([a-fA-F0-9]{64})'";
-$targetFile = "GeForceNOW.exe";
+$source = "https://download.voipit.nl/IAM/PC/IAM.msi";
+$packageName = "i-am";
+$programName = "I AM";
+$cregex = '-Checksum "([a-fA-F0-9]{64})"';
+$targetFile = "CM_FP_Communicator.exe";
 $vregex = "<version>([0-9]+\.[0-9]+\.[0-9]+\.([0-9]+))</version>";
 
 $target = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
