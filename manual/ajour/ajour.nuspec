@@ -22,7 +22,7 @@
     </description>
     <releaseNotes>https://github.com/casperstorm/ajour/releases/tag/0.6.1</releaseNotes>
     <projectUrl>https://www.getajour.com/</projectUrl>
-    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/ajour</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/ajour</packageSourceUrl>
     <docsUrl>https://github.com/casperstorm/ajour/wiki</docsUrl>
     <mailingListUrl>https://github.com/casperstorm/ajour/issues</mailingListUrl>
     <tags>world-of-warcraft tukui curse addon mod</tags>

@@ -17,7 +17,7 @@ Supports downloading mods via:
     </description>
     <releaseNotes>https://github.com/WowUp/WowUp/releases/tag/v2.0.3</releaseNotes>
     <projectUrl>https://wowup.io/</projectUrl>
-    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/master/manual/wowup</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/wowup</packageSourceUrl>
     <docsUrl>https://wowup.io/faq</docsUrl>
     <mailingListUrl>https://github.com/WowUp/WowUp/issues</mailingListUrl>
     <tags>world-of-warcraft tukui curse github wowinterface addon mod</tags>
