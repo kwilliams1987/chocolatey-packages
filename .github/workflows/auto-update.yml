@@ -98,6 +98,20 @@ jobs:
           git add -A
           git commit -m "Automatically updated WeakAuras Companion."
         }
+    - name: Update I AM
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\i-am\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Commit I AM changes
+      run: |
+        $changes = (git status --porcelain)
+        if ($changes.Length -gt 0)
+        {
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Automatically updated I AM."
+        }
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
