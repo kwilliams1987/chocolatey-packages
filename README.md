@@ -34,6 +34,18 @@ Unified Lighting effects for a wide range of 3rd party interfaces.
 
 [Homepage](http://www.project-aurora.com/)
 
+## I AM VOIP Software
+All in one VOIP Solution
+
+`choco install i-am`
+
+[Source Code](https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/i-am)
+
+[Package](https://chocolatey.org/packages/i-am)
+
+[Homepage](https://www.cisco.com/)
+
+
 ## NVIDIA GeForce Now
 An auto-installer for the NVIDIA GeForce Now streaming software.
 

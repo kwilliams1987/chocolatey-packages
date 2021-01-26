@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  update:
-    runs-on: windows-latest
-    
+  nvidia-geforce-now:
+    name: NVIDIA GeForce NOW
+    runs-on: windows-latest    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -28,6 +28,17 @@ jobs:
           git add -A
           git commit -m "Automatically updated NVIDIA GeForce NOW."
         }
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  project-aurora:
+    name: Project Aurora
+    runs-on: windows-latest    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Update Project Aurora
       uses: Amadevus/pwsh-script@v1.0.0
       with:
@@ -42,6 +53,17 @@ jobs:
           git add -A
           git commit -m "Automatically updated Project Aurora."
         }
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  ajour:
+    name: Ajour
+    runs-on: windows-latest    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Update Ajour
       uses: Amadevus/pwsh-script@v1.0.0
       with:
@@ -56,6 +78,17 @@ jobs:
           git add -A
           git commit -m "Automatically updated Ajour."
         }
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  ajour-opengl:
+    name: Ajour (OpenGL)
+    runs-on: windows-latest    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Update Ajour (OpenGL)
       uses: Amadevus/pwsh-script@v1.0.0
       with:
@@ -70,6 +103,17 @@ jobs:
           git add -A
           git commit -m "Automatically updated Ajour (Open GL)."
         }
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:        
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  wowup:
+    name: WowUp
+    runs-on: windows-latest    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Update WowUp
       uses: Amadevus/pwsh-script@v1.0.0
       with:
@@ -83,7 +127,18 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           git commit -m "Automatically updated WowUp."
-        }
+        }        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  weakauras-companion:
+    name: WeakAuras Companion
+    runs-on: windows-latest    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Update WeakAuras Companion
       uses: Amadevus/pwsh-script@v1.0.0
       with:
@@ -98,6 +153,17 @@ jobs:
           git add -A
           git commit -m "Automatically updated WeakAuras Companion."
         }
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  i-am:
+    name: I AM
+    runs-on: windows-latest    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Update I AM
       uses: Amadevus/pwsh-script@v1.0.0
       with:
