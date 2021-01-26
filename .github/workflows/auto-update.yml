@@ -18,6 +18,10 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\nvidia-geforce-now\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Resynchronise repository
+      run: |
+        git fetch
+        git pull
     - name: Commit NVIDIA GeForce NOW changes
       run: |
         $changes = (git status --porcelain)
@@ -43,6 +47,10 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\project-aurora\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Resynchronise repository
+      run: |
+        git fetch
+        git pull
     - name: Commit Project Aurora changes
       run: |
         $changes = (git status --porcelain)
@@ -68,6 +76,10 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\ajour\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Resynchronise repository
+      run: |
+        git fetch
+        git pull
     - name: Commit Ajour changes
       run: |
         $changes = (git status --porcelain)
@@ -93,6 +105,10 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\ajour-opengl\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Resynchronise repository
+      run: |
+        git fetch
+        git pull
     - name: Commit Ajour (OpenGL) changes
       run: |
         $changes = (git status --porcelain)
@@ -118,6 +134,10 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\wowup\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Resynchronise repository
+      run: |
+        git fetch
+        git pull
     - name: Commit WowUp changes
       run: |
         $changes = (git status --porcelain)
@@ -143,6 +163,10 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\weakauras-companion\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Resynchronise repository
+      run: |
+        git fetch
+        git pull
     - name: Commit WeakAuras Companion changes
       run: |
         $changes = (git status --porcelain)
@@ -168,6 +192,10 @@ jobs:
       uses: Amadevus/pwsh-script@v1.0.0
       with:
         script: .\manual\i-am\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Resynchronise repository
+      run: |
+        git fetch
+        git pull
     - name: Commit I AM changes
       run: |
         $changes = (git status --porcelain)
