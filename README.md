@@ -35,7 +35,7 @@ Unified Lighting effects for a wide range of 3rd party interfaces.
 [Homepage](http://www.project-aurora.com/)
 
 ## I AM VOIP Software
-All in one VOIP Solution
+All in one VOIP Solution from Dutch ISP RoutIT.
 
 `choco install i-am`
 
@@ -43,7 +43,7 @@ All in one VOIP Solution
 
 [Package](https://chocolatey.org/packages/i-am)
 
-[Homepage](https://www.cisco.com/)
+[Homepage](https://routit.nl/oplossingen/voip/)
 
 
 ## NVIDIA GeForce Now
