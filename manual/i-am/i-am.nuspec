@@ -4,18 +4,25 @@
     <id>i-am</id>
     <title>I AM</title>
     <version>22.9.14.138</version>
-    <authors>Cisco</authors>
+    <authors>RoutIT</authors>
     <owners>Kristian Williams</owners>
-    <summary>Cisco I AM VOIP Software</summary>
-    <description>I AM is efficiënt communiceren op de manier die u het beste uitkomt: bellen, chat, video, of zelfs met meerdere personen tegelijk via groep-chat en groepsgesprek. Daarbij is op elk moment de beschikbaarheid van uw collega’s inzichtelijk.
+    <summary>I AM Totaalcommunicatie VOIP Software</summary>
+    <description>## Dutch
+
+I AM is efficiënt communiceren op de manier die u het beste uitkomt: bellen, chat, video, of zelfs met meerdere personen tegelijk via groep-chat en groepsgesprek. Daarbij is op elk moment de beschikbaarheid van uw collega’s inzichtelijk.
 
 I AM is óók eenvoudig samenwerken door het delen van uw scherm, delen van bestanden, en integratie met Outlook contacten en agenda.
 
-I AM is volledig geïntegreerd met de telefooncentrale. Collega's zien dat u in gesprek bent. Telefoon instellingen, zoals “niet storen” en doorschakelen, zijn te wijzigen.</description>
-    <projectUrl>https://www.cisco.com/</projectUrl>
+I AM is volledig geïntegreerd met de telefooncentrale. Collega's zien dat u in gesprek bent. Telefoon instellingen, zoals “niet storen” en doorschakelen, zijn te wijzigen.
+
+## English
+
+Leverage the power of I AM to allow users to access business communications and collaboration services from their favorite devices - wherever they happen to be.</description>
+    <projectUrl>https://routit.nl/oplossingen/voip/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/i-am</packageSourceUrl>
-    <tags>cisco voip uc-one</tags>
+    <tags>routit cisco voip uc-one</tags>
     <iconUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/resources/i-am.png</iconUrl>
+    <licenseUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/i-am/LICENSE.md</licenseUrl>
     <dependencies />
   </metadata>
   <files>
