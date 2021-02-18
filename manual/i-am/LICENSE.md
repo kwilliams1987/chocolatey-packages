@@ -58,8 +58,7 @@ The Product is not a replacement for Your mobile or fixed line telephone. In par
 
 11. THIRD PARTIES.
    
-    This software uses Qt libraries licensed under the GNU Lesser General Public License.
-
+    - This software uses Qt libraries licensed under the GNU Lesser General Public License.
     - This software uses parts of Qt Toolkit.
       - Copyright (C) 2010 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. Contact: Nokia Corporation (qt-info@nokia.com).
     - This software uses libEtPan mail library. Copyright (C) 2001-2010 DINH Viet Hoa.
