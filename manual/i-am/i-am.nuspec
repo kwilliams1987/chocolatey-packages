@@ -21,7 +21,7 @@ Leverage the power of I AM to allow users to access business communications and 
     <projectUrl>https://routit.nl/oplossingen/voip/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/i-am</packageSourceUrl>
     <tags>routit cisco voip uc-one</tags>
-    <iconUrl>https://cdn.jsdelivr.net/gh/kwilliams1987/chocolatey-packages/resources/i-am.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/kwilliams1987/chocolatey-packages/manual/i-am/resources/icon.png</iconUrl>
     <licenseUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/i-am/LICENSE.md</licenseUrl>
     <dependencies />
   </metadata>
