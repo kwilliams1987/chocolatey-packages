@@ -25,7 +25,7 @@
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/ajour-opengl</packageSourceUrl>
     <docsUrl>https://github.com/casperstorm/ajour/wiki</docsUrl>
     <mailingListUrl>https://github.com/casperstorm/ajour/issues</mailingListUrl>
-    <tags>world of warcraft tukui curse addon</tags>
+    <tags>world-of-warcraft tukui curse addon mod</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/casperstorm/ajour/master/resources/logo/256x256/ajour.png</iconUrl>
     <licenseUrl>https://raw.githubusercontent.com/casperstorm/ajour/master/LICENSE</licenseUrl>
