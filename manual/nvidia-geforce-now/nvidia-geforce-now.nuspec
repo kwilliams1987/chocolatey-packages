@@ -26,6 +26,7 @@ This package always installs the latest version of GeForce NOW, regardless of th
     <docsUrl>https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/geforce-now/mac/geforce-now-mac-qsg.pdf</docsUrl>
     <mailingListUrl>https://www.nvidia.com/en-us/geforce/forums/gfn-for-pc/22/</mailingListUrl>
     <licenseUrl>https://www.nvidia.com/en-us/drivers/nvidia-license/</licenseUrl>
+    <releaseNotes>https://www.nvidia.com/en-us/geforce-now/release-highlights/</releaseNotes>
     <tags>games streaming geforce nvidia</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/kwilliams1987/chocolatey-packages/manual/nvidia-geforce-now/resources/icon.png</iconUrl>
