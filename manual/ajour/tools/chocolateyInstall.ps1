@@ -1,4 +1,4 @@
-$expectedHash = "59cba2266dba8caee8f5e3b830aa4c24dad25ffe333dfa657b2c005add351914";
+$expectedHash = "bbd21152f322c568f9f6f19faed9f1acf7ed363f65cc471c040eaee4c527e189";
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)";
 $fileName = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
