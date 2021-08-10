@@ -3,7 +3,7 @@ $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)";
 $fileName = "$env:TEMP\" + [System.IO.Path]::GetRandomFileName();
 
 Get-ChocolateyWebFile -PackageName 'Ajour' -FileFullPath "$fileName" `
-    -Url 'https://github.com/casperstorm/ajour/releases/download/1.2.5/ajour.exe' `
+    -Url 'https://github.com/casperstorm/ajour/releases/download/1.2.5/ajour-noselfupdate.exe' `
     -Checksum $expectedHash `
     -ChecksumType 'sha256';
 
