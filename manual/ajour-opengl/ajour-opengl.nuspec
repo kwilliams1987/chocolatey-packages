@@ -3,7 +3,7 @@
   <metadata>
     <id>ajour-opengl</id>
     <title>Ajour (OpenGL)</title>
-    <version>1.2.5</version>
+    <version>1.3.0</version>
     <authors>Casper Rogild Storm</authors>
     <owners>Kristian Williams</owners>
     <summary>Unified World of Warcraft addon manager using OpenGL renderer.</summary>
@@ -20,7 +20,7 @@
 - [Create your own custom themes](./THEMES.md)
 - Ability to backup your whole UI, including all settings from WTF
     </description>
-    <releaseNotes>https://github.com/casperstorm/ajour/releases/tag/1.2.5</releaseNotes>
+    <releaseNotes>https://github.com/casperstorm/ajour/releases/tag/1.3.0</releaseNotes>
     <projectUrl>https://www.getajour.com/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/ajour-opengl</packageSourceUrl>
     <docsUrl>https://github.com/casperstorm/ajour/wiki</docsUrl>
