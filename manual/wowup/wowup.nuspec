@@ -3,7 +3,7 @@
   <metadata>
     <id>wowup</id>
     <title>WowUp</title>
-    <version>2.4.3</version>
+    <version>2.4.4</version>
     <authors>WowUp Team</authors>
     <owners>Kristian Williams</owners>
     <summary>Unified World of Warcraft addon manager.</summary>
@@ -15,7 +15,7 @@ Supports downloading mods via:
 - WowInterface
 - TukUI
     </description>
-    <releaseNotes>https://github.com/WowUp/WowUp/releases/tag/v2.4.3</releaseNotes>
+    <releaseNotes>https://github.com/WowUp/WowUp/releases/tag/v2.4.4</releaseNotes>
     <projectUrl>https://wowup.io/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/wowup</packageSourceUrl>
     <docsUrl>https://wowup.io/faq</docsUrl>
