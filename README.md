@@ -16,13 +16,6 @@ Unified World of Warcraft addon manager.
 
 [Homepage](https://www.getajour.com/)
 
-
-`choco install ajour-opengl`
-
-[Source Code](https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/ajour-opengl)
-
-[Package](https://chocolatey.org/packages/ajour-opengl)
-
 ## Aurora - Unified Lighting Effects
 Unified Lighting effects for a wide range of 3rd party interfaces.
 
