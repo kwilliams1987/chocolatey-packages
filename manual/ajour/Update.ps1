@@ -3,7 +3,7 @@ param($apiKey);
 Set-StrictMode -Version Latest
 
 $source = "https://github.com/casperstorm/ajour/releases/latest";
-$template = "https://github.com/casperstorm/ajour/releases/download/{0}/ajour.exe";
+$template = "https://github.com/casperstorm/ajour/releases/download/{0}/ajour-noselfupdate.exe";
 $packageName = "ajour";
 $programName = "Ajour";
 
