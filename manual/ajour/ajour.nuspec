@@ -17,7 +17,7 @@
 - Remove addons and their dependencies
 - Ignore addons you don't want to update
 - Supports both Retail and Classic version of World of Warcraft
-- [Create your own custom themes](https://github.com/casperstorm/ajour/blob/master/THEMES.md)
+- [Create your own custom themes](https://theme.getajour.com/)
 - Ability to backup your whole UI, including all settings from WTF
     </description>
     <releaseNotes>https://github.com/casperstorm/ajour/releases/tag/1.3.2</releaseNotes>
