@@ -29,10 +29,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/casperstorm/ajour/master/resources/logo/256x256/ajour.png</iconUrl>
     <licenseUrl>https://raw.githubusercontent.com/casperstorm/ajour/master/LICENSE</licenseUrl>
-    <dependencies />
+    
+    <dependencies>
+      <dependency id="ajour" />
+    </dependencies>
   </metadata>
-  <dependencies>
-    <dependency id="ajour" />
-  </dependencies>
   <files />
 </package>
