@@ -1,2 +1,2 @@
 Install-ChocolateyPackage "I AM" "msi" "/quiet" "https://download.voipit.nl/IAM/PC/IAM.msi" `
-    -Checksum "5b9a7bb912ae45d93c6f6b2dc7fbe9d9d5c691fc800face014f9bf0d77ec7d50" -checksumType "sha256"
+    -Checksum "bb0d9734343ca662f9a125db2b1b3e64818f47b104d4d426c11035e7b6043d0c" -checksumType "sha256"
