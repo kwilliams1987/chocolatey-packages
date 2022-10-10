@@ -152,32 +152,3 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-
-  i-am:
-    name: I AM
-    runs-on: windows-latest    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Update I AM
-      uses: Amadevus/pwsh-script@v1.0.0
-      with:
-        script: .\manual\i-am\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
-    - name: Resynchronise repository
-      run: |
-        git fetch
-        git pull
-    - name: Commit I AM changes
-      run: |
-        $changes = (git status --porcelain)
-        if ($changes.Length -gt 0)
-        {
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git commit -m "Automatically updated I AM."
-        }
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -2,12 +2,15 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>i-am</id>
-    <title>I AM</title>
-    <version>22.9.31.241</version>
+    <title>[Deprecated] I AM</title>
+    <version>22.9.31.242</version>
     <authors>RoutIT</authors>
     <owners>Kristian Williams</owners>
     <summary>I AM Totaalcommunicatie VOIP Software</summary>
-    <description>## Dutch
+    <description>
+      **I AM has been replaced by Webex.**
+
+      ## Dutch
 
 I AM is efficiënt communiceren op de manier die u het beste uitkomt: bellen, chat, video, of zelfs met meerdere personen tegelijk via groep-chat en groepsgesprek. Daarbij is op elk moment de beschikbaarheid van uw collega’s inzichtelijk.
 
@@ -21,11 +24,9 @@ Leverage the power of I AM to allow users to access business communications and 
     <projectUrl>https://routit.nl/portfolio/vaste-telefonie/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/i-am</packageSourceUrl>
     <tags>routit cisco voip uc-one</tags>
-    <iconUrl>https://cdn.jsdelivr.net/gh/kwilliams1987/chocolatey-packages/manual/i-am/resources/icon.png</iconUrl>
     <licenseUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/i-am/LICENSE.md</licenseUrl>
-    <dependencies />
+    <dependencies>
+      <dependency id="webex" />
+    </dependencies>
   </metadata>
-  <files>
-	  <file src="tools\**" target="tools" />
-  </files>
 </package>
