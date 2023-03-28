@@ -3,7 +3,7 @@
   <metadata>
     <id>nvidia-geforce-now</id>
     <title>Nvidia GeForce NOW</title>
-    <version>2.0.49.115</version>
+    <version>2.0.50.104</version>
     <authors>Nvidia Corporation</authors>
     <owners>Kristian Williams</owners>
     <summary>Web based game streaming, powered by NVIDIA.</summary>
