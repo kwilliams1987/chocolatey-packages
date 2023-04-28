@@ -1,0 +1,1 @@
+Get-Process -Name "wowup-cf" -ErrorAction SilentlyContinue | Stop-Process -Force

@@ -10,7 +10,7 @@ on:
 jobs:
   nvidia-geforce-now:
     name: NVIDIA GeForce NOW
-    runs-on: windows-latest    
+    runs-on: windows-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -39,7 +39,7 @@ jobs:
 
   project-aurora:
     name: Project Aurora
-    runs-on: windows-latest    
+    runs-on: windows-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -68,7 +68,7 @@ jobs:
 
   ajour:
     name: Ajour
-    runs-on: windows-latest    
+    runs-on: windows-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -97,7 +97,7 @@ jobs:
 
   wowup:
     name: WowUp
-    runs-on: windows-latest    
+    runs-on: windows-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -124,9 +124,38 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
+  wowup-cf:
+    name: WowUp CF
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Update WowUp
+      uses: Amadevus/pwsh-script@v1.0.0
+      with:
+        script: .\manual\wowup-cf\Update.ps1 ${{ secrets.CHOCO_API_KEY }}
+    - name: Resynchronise repository
+      run: |
+        git fetch
+        git pull
+    - name: Commit WowUp changes
+      run: |
+        $changes = (git status --porcelain)
+        if ($changes.Length -gt 0)
+        {
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Automatically updated WowUp CurseForge."
+        }        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
   weakauras-companion:
     name: WeakAuras Companion
-    runs-on: windows-latest    
+    runs-on: windows-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
