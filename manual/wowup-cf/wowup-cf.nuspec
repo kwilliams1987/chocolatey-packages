@@ -15,15 +15,15 @@ Supports downloading mods via:
 - WowInterface
 - TukUI
     </description>
-    <releaseNotes>https://github.com/WowUp/WowUp/releases/tag/v2.9.0</releaseNotes>
+    <releaseNotes>https://github.com/WowUp/WowUp.CF/releases/tag/v2.9.2</releaseNotes>
     <projectUrl>https://wowup.io/</projectUrl>
-    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/wowup</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/wowup-cf</packageSourceUrl>
     <docsUrl>https://wowup.io/guide/wowup/overview</docsUrl>
-    <mailingListUrl>https://github.com/WowUp/WowUp/issues</mailingListUrl>
+    <mailingListUrl>https://github.com/WowUp/WowUp.CF/issues</mailingListUrl>
     <tags>world-of-warcraft tukui curse github wowinterface addon mod</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.wowup.io/site/assets/images/wowup_white_lg_nopad.png</iconUrl>
-    <licenseUrl>https://raw.githubusercontent.com/WowUp/WowUp/master/LICENSE</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/WowUp/WowUp.CF/master/LICENSE</licenseUrl>
     <dependencies />
   </metadata>
   <files>
