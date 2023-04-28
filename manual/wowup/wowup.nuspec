@@ -11,16 +11,17 @@
 
 Supports downloading mods via:
 - GitHub
-- CurseForge
 - WowInterface
 - TukUI
+
+For Curseforge Support please see [wowup-cf](https://community.chocolatey.org/packages/wowup-cf).
     </description>
     <releaseNotes>https://github.com/WowUp/WowUp/releases/tag/v2.9.3</releaseNotes>
     <projectUrl>https://wowup.io/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/wowup</packageSourceUrl>
     <docsUrl>https://wowup.io/guide/wowup/overview</docsUrl>
     <mailingListUrl>https://github.com/WowUp/WowUp/issues</mailingListUrl>
-    <tags>world-of-warcraft tukui curse github wowinterface addon mod</tags>
+    <tags>world-of-warcraft tukui github wowinterface addon mod</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.wowup.io/site/assets/images/wowup_white_lg_nopad.png</iconUrl>
     <licenseUrl>https://raw.githubusercontent.com/WowUp/WowUp/master/LICENSE</licenseUrl>
