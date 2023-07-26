@@ -3,7 +3,7 @@
   <metadata>
     <id>wowup</id>
     <title>WowUp</title>
-    <version>2.9.4</version>
+    <version>2.10.0</version>
     <authors>WowUp Team</authors>
     <owners>Kristian Williams</owners>
     <summary>Unified World of Warcraft addon manager.</summary>
@@ -16,7 +16,7 @@ Supports downloading mods via:
 
 For Curseforge Support please see [wowup-cf](https://community.chocolatey.org/packages/wowup-cf).
     </description>
-    <releaseNotes>https://github.com/WowUp/WowUp/releases/tag/v2.9.4</releaseNotes>
+    <releaseNotes>https://github.com/WowUp/WowUp/releases/tag/v2.10.0</releaseNotes>
     <projectUrl>https://wowup.io/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/wowup</packageSourceUrl>
     <docsUrl>https://wowup.io/guide/wowup/overview</docsUrl>
