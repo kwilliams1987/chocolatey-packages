@@ -1,3 +1,3 @@
 Install-ChocolateyPackage "WeakAuras Companion" "exe" "/silent" `
-    "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v5.2.1/WeakAuras-Companion-Setup-5.2.1.exe" `
-    -checksum "a70b384e8563c3202a99a6a6c3e9fd32a021c97d51075b2ff5b59527d1f2d7bf" -checksumType "sha256"
+    "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v5.2.2/WeakAuras-Companion-Setup-5.2.2.exe" `
+    -checksum "d7d896779107fb124ef5ac64c62681325d0ecb019fb67ab6b247d0cb0c81f297" -checksumType "sha256"
