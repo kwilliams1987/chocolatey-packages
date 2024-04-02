@@ -1,6 +1,6 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-Get-ChocolateyWebFile 'Nvidia GeForce NOW' "$toolsDir\GeForceNOW-release.exe" -Url 'https://download.nvidia.com/gfnpc/GeForceNOW-release.exe' -Checksum 'f45350fc2ae31fb32bc155aaf6a7319265e35aec6d070135f3e41bbf4f65ac9a' -ChecksumType 'sha256'
+Get-ChocolateyWebFile 'Nvidia GeForce NOW' "$toolsDir\GeForceNOW-release.exe" -Url 'https://download.nvidia.com/gfnpc/GeForceNOW-release.exe' -Checksum 'ea6ce50959976b640867deb9a4458149af1aa75da4e32036ae78f04c6eb68d61' -ChecksumType 'sha256'
 Get-ChocolateyUnzip "$toolsDir\GeForceNOW-release.exe" $toolsDir
 
 Install-ChocolateyInstallPackage 'Nvidia GeForce NOW' 'exe' '' "$toolsDir\setup.exe"
