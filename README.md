@@ -49,6 +49,17 @@ Unified World of Warcraft addon manager.
 
 [Homepage](https://wowup.io/)
 
+## WowUp (CurseForge)
+Unified World of Warcraft addon manager with CurseForge Support.
+
+`choco install wowup-cf`
+
+[Source Code](https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/wowup-cf)
+
+[Package](https://chocolatey.org/packages/wowup-cf)
+
+[Homepage](https://wowup.io/)
+
 ## WeakAuras Companion
 WeakAuras Companion App
 
