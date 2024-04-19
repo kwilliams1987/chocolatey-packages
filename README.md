@@ -16,17 +16,6 @@ Unified World of Warcraft addon manager.
 
 [Homepage](https://www.getajour.com/)
 
-## Aurora - Unified Lighting Effects
-Unified Lighting effects for a wide range of 3rd party interfaces.
-
-`choco install project-aurora`
-
-[Source Code](https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/project-aurora)
-
-[Package](https://chocolatey.org/packages/project-aurora)
-
-[Homepage](http://www.project-aurora.com/)
-
 ## NVIDIA GeForce Now
 NVIDIA GeForce Now cloud gaming software.
 
