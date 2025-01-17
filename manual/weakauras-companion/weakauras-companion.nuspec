@@ -3,7 +3,7 @@
   <metadata>
     <id>weakauras-companion</id>
     <title>WeakAuras Companion</title>
-    <version>5.2.7</version>
+    <version>5.2.8</version>
     <authors>WeakAuras</authors>
     <owners>Kristian Williams</owners>
     <summary>WeakAuras Companion App for World of Warcraft.</summary>
@@ -11,7 +11,7 @@
 
 It enables you to fetch updates to the auras you have installed directly from Wago, without having to manually copy-paste import strings all the time. It also makes sure you don't miss any updates, always keeping you up to date with the latest versions.
     </description>
-    <releaseNotes>https://github.com/WeakAuras/WeakAuras-Companion/releases/tag/v5.2.7</releaseNotes>
+    <releaseNotes>https://github.com/WeakAuras/WeakAuras-Companion/releases/tag/v5.2.8</releaseNotes>
     <projectUrl>https://weakauras.wtf/</projectUrl>
     <packageSourceUrl>https://github.com/kwilliams1987/chocolatey-packages/tree/main/manual/weakauras-companion</packageSourceUrl>
     <docsUrl>https://github.com/WeakAuras/WeakAuras-Companion</docsUrl>
