@@ -1,3 +1,3 @@
 Install-ChocolateyPackage 'WowUp' "exe" "/silent" `
-    'https://github.com/WowUp/WowUp.CF/releases/download/v2.25.4/WowUp-CF-Setup-2.25.4.exe' `
-    -Checksum "c0706772cde476f2a3232a10c28f1a987e5e9652bc46bce067979ba6ab075733" -ChecksumType 'sha256';
+    'https://github.com/WowUp/WowUp.CF/releases/download/v2.25.5/WowUp-CF-Setup-2.25.5.exe' `
+    -Checksum "3541e6f2a7b1c37babce691ab468cd059d1d7536dd09df737f9c807f94878728" -ChecksumType 'sha256';
